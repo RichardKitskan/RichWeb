@@ -12,10 +12,10 @@ async function fetchPosts()
         }
     });
 
-    let bodySum;
+    let bodyData;
     data.map((data) => 
     {
-        bodySum += JSON.stringify(data.body);
+        bodyData += JSON.stringify(data.body);
     });
 
     let freq = newFreqMap(bodyData);
@@ -42,4 +42,5 @@ function newFreqMap(str)
     return frequencyArr;
 }
 
+fetchPosts();
 fetchPosts();
